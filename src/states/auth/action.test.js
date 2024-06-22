@@ -11,7 +11,7 @@ describe('auth action', () => {
     await handleLoginThunkAction({ email: '', password: '' })(dispatch);
     expect(api.login()).resolves.toBeTruthy();
     expect(dispatch).toHaveBeenCalled();
-    expect(dispatch).toHaveBeenCalledWith({ type: 'COBA_ERROR' }); // create error test
+    expect(dispatch).toHaveBeenCalledWith({ type: 'LOGIN_SUCCESS' });
   });
   it('handle register thunk action', async () => {
     vitest.spyOn(api, 'register').mockResolvedValue({});
