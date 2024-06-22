@@ -37,6 +37,7 @@ describe('Login', () => {
     cy.get('[data-cy=email]').type('nani@gmail.com');
     cy.get('[data-cy=password]').type('nani123');
     cy.get('[data-cy=button-login]').click();
+    cy.get('.swal2-container').contains('OK').click();
     cy.get('[data-cy=logout]').click();
   });
 });
